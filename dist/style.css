@@ -1,0 +1,72 @@
+/*!*********************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./sass/globals.scss ***!
+  \*********************************************************************************************************************************************************/
+.notification-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0095f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  transform: translateY(-100%);
+  transition: all 100ms linear;
+  cursor: pointer;
+}
+.notification-bar h2 {
+  color: #fff;
+}
+.notification-bar:hover {
+  opacity: 0.95;
+}
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-provider {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.slide-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: 8px;
+  transition: opacity 100ms linear;
+  opacity: 0;
+}
+.slide-img[data-state=visible] {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fafafa;
+  color: #242424;
+  font-family: Montserrat, sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map*/
