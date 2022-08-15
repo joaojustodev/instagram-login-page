@@ -41,25 +41,66 @@
 
         <div class="login-right-side">
           <div>
-            <div class="logo">Instagram</div>
-            <form class="login-form">
-              <input type="text" name="username" id="username" />
-              <input type="password" name="pass" id="pass" />
-              <button type="submit">Entrar</button>
-            </form>
-            <div>
-              <span class="line1"></span>
-              <span>ou</span>
-              <span class="line2"></span>
+            <div class="login-logo">
+              <img src="/public/assets/logo.png" alt="Logo instagram" />
             </div>
+            <form class="login-form">
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Telefone, nome de usuário ou email"
+              />
+              <input
+                type="password"
+                name="pass"
+                id="pass"
+                placeholder="Senha"
+              />
 
-            <button type="button">Entrar com Facebook</button>
-            <a href="#">Esqueceu a senha?</a>
+              <button type="submit" disabled>Entrar</button>
+
+              <div class="login-divisor">
+                <div class="line"></div>
+                <span>ou</span>
+                <div class="line"></div>
+              </div>
+
+              <div class="login-providers">
+                <button type="button" class="login-facebook">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABuklEQVRoge2ZsU7CQBzGv38xLsDqQAIJzwAmLpoSmbCG1CfwFXDRxFElTvgmoNEymQAmJkYdfAWNRlcJLBJ6DixEuEKvvWtN7rd+vf99X+6u/acHaDQaTZTQogdKtlMdAzUiFMGQVGEKhCEYPcFFo3dVufZ+1APTbp8zsMNw3fmF1Xst65incgOUbKfqApdyTPmDgN1ua+dmnmbwBo2BmjxL/mDAAU/jBiCwghw7QhR5AjcAQCkZTgRJ8wSPAP+DFZWTJRKEynYW5c0M8rkU0qlV0NRrxNxr+66pLIBhEM6OCtgorIVbN9RqHljlbOjmAYUBylsZKXWVbaF8bvZFcnLxgruHL4xGrnBdZQGSydmpOvefcF0WqK6yLWTQbNcS1DygvwPedJuVpfXv/g+q+7e+54jNCry+D4TGxSbA28dQaFyMAoitgNQzMN3bzDsPIr3PX2KzAqLoAFGjA0SNDhA1OkDU6ABR4xGAiXVXcujzBI9mzngGmBmWg4CN2zNP4K+Ai0aQGcPEIMb1wg0wuRlhdTmWlocRTjtNy+HpC6+YTNuxJv/n2bq6P9ZsANCjQazhZV6j0Wii5xenO2V+QqiXMQAAAABJRU5ErkJggg=="
+                  />
+                  Entrar com Facebook
+                </button>
+                <a href="#" class="login-forgot-pass">Esqueceu a senha?</a>
+              </div>
+            </form>
           </div>
 
           <div>
-            <span>Não tem uma conta?</span>
-            <a href="#">Cadastre-se</a>
+            <p>
+              Não tem uma conta?
+              <a href="#">Cadastre-se</a>
+            </p>
+          </div>
+
+          <div class="login-get-app">
+            <p>Obtenha o aplicativo</p>
+            <div>
+              <a href="#">
+                <img
+                  src="/public/assets/bagde-ios.png"
+                  alt="Baixar app no iphone"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="/public/assets/badge-android.png"
+                  alt="Baixar app no android"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </article>
