@@ -2,8 +2,6 @@ export class Slider {
   provider;
   images;
   totalImages;
-  btnPrev;
-  btnNext;
   init = 0;
   slideInterval;
   interval = 5000;
@@ -15,8 +13,6 @@ export class Slider {
   start() {
     this.provider = document.getElementById("slide-provider");
     this.images = Array.from(document.getElementsByClassName("slide-img"));
-    this.btnNext = document.getElementById("slide-next");
-    this.btnPrev = document.getElementById("slide-prev");
 
     this.provider.setAttribute("data-images", this.images.length);
     this.totalImages = this.images.length;
@@ -74,22 +70,14 @@ export class Slider {
   }
 
   controls() {
-    this.btnNext.addEventListener("click", () => {
-      this.nextImage();
-      this.resetInterval();
-    });
-
-    this.btnPrev.addEventListener("click", () => {
-      this.prevImage();
-      this.resetInterval();
-    });
-
     this.provider.addEventListener("mouseenter", () => {
       this.clearInterval();
+      console.log("entrei");
     });
 
     this.provider.addEventListener("mouseleave", () => {
       this.startInterval();
+      console.log("sai");
     });
   }
 

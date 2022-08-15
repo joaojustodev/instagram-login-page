@@ -1,4 +1,4 @@
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
@@ -6,7 +6,7 @@
 /*!***************************!*\
   !*** ./sass/globals.scss ***!
   \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
@@ -18,11 +18,11 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************!*\
   !*** ./js/modules/NotificationTab.js ***!
   \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "NotificationTab": () => (/* binding */ NotificationTab)
+/* harmony export */   "NotificationTab": function() { return /* binding */ NotificationTab; }
 /* harmony export */ });
 class NotificationTab {
   element;
@@ -60,18 +60,16 @@ class NotificationTab {
 /*!******************************!*\
   !*** ./js/modules/Slider.js ***!
   \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Slider": () => (/* binding */ Slider)
+/* harmony export */   "Slider": function() { return /* binding */ Slider; }
 /* harmony export */ });
 class Slider {
   provider;
   images;
   totalImages;
-  btnPrev;
-  btnNext;
   init = 0;
   slideInterval;
   interval = 5000;
@@ -83,8 +81,6 @@ class Slider {
   start() {
     this.provider = document.getElementById("slide-provider");
     this.images = Array.from(document.getElementsByClassName("slide-img"));
-    this.btnNext = document.getElementById("slide-next");
-    this.btnPrev = document.getElementById("slide-prev");
 
     this.provider.setAttribute("data-images", this.images.length);
     this.totalImages = this.images.length;
@@ -142,22 +138,14 @@ class Slider {
   }
 
   controls() {
-    this.btnNext.addEventListener("click", () => {
-      this.nextImage();
-      this.resetInterval();
-    });
-
-    this.btnPrev.addEventListener("click", () => {
-      this.prevImage();
-      this.resetInterval();
-    });
-
     this.provider.addEventListener("mouseenter", () => {
       this.clearInterval();
+      console.log("entrei");
     });
 
     this.provider.addEventListener("mouseleave", () => {
       this.startInterval();
+      console.log("sai");
     });
   }
 
@@ -200,37 +188,37 @@ class Slider {
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
+/******/ 		__webpack_require__.r = function(exports) {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
+!function() {
 /*!*********************!*\
   !*** ./js/index.js ***!
   \*********************/
@@ -245,8 +233,7 @@ __webpack_require__.r(__webpack_exports__);
 new _modules_NotificationTab__WEBPACK_IMPORTED_MODULE_1__.NotificationTab();
 new _modules_Slider__WEBPACK_IMPORTED_MODULE_2__.Slider();
 
-})();
-
+}();
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
