@@ -2,13 +2,16 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+
+  @include customMaxBp(440px) {
+    display: block;
+  }
 }
 
 .login-article {
   height: 100%;
-  margin-top: 6rem;
+  margin-top: 4rem;
   display: flex;
 }
 
@@ -17,6 +20,10 @@
   height: 580px;
   margin-right: 2rem;
   background-image: url("../../public/assets/home-phones.png");
+
+  @include customMaxBp(875px) {
+    display: none;
+  }
 }
 
 .login-slide-root {
@@ -59,6 +66,10 @@
   flex-direction: column;
   row-gap: 0.6rem;
 
+  @include customMaxBp(440px) {
+    width: 100%;
+  }
+
   > div:nth-child(1) {
     width: 100%;
     padding: 0.7rem;
@@ -66,9 +77,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     background: #fff;
     border: 1px solid #c6c6c6;
+
+    @include customMaxBp(440px) {
+      border: none;
+      background-color: $background;
+    }
   }
 
   > div:nth-child(2) {
@@ -91,6 +106,11 @@
       font-weight: 500;
       text-decoration: none;
     }
+
+    @include customMaxBp(440px) {
+      border: none;
+      background-color: $background;
+    }
   }
 }
 
@@ -99,6 +119,8 @@
 }
 
 .login-form {
+  width: 100%;
+  max-width: 267px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,14 +128,14 @@
   row-gap: 0.4rem;
 
   input {
-    width: 267px;
+    width: 100%;
     height: 36px;
     padding: 8px 7px;
     border: 1px solid #c6c6c6;
   }
 
   button {
-    width: 267px;
+    width: 100%;
     height: 30px;
     margin-top: 0.4rem;
 
@@ -133,8 +155,8 @@
 }
 
 .login-divisor {
+  width: 100%;
   margin: 10px 0 18px 0;
-  width: 267px;
   display: flex;
   align-items: center;
   column-gap: 0.4rem;
@@ -193,6 +215,9 @@
   > div {
     margin: 10px 0;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     column-gap: 0.7rem;
   }
 
